@@ -8,7 +8,7 @@ pg.init()
 screen = pg.display.set_mode((800, 600)) 
 
 # キャラクター追加
-player = pg.image.load("images/blue_ninja.png")
+player = pg.image.load("images/ninja.png")
 player = pg.transform.scale(player, (100, 100))
 player = pg.transform.flip(player, True, False)
 player_rect = pg.rect.Rect(0, 480, 100, 100)
