@@ -13,7 +13,7 @@ player = pg.image.load("images/ninja.png")
 player = pg.transform.scale(player, (100, 100))
 player = pg.transform.flip(player, True, False)
 player_rect = pg.rect.Rect(0, 480, 100, 100)
-# <<>> ここまで追加
+# << ここまで追加
 
 while True:
     # 画面を白で塗りつぶす
@@ -25,7 +25,7 @@ while True:
 # >> ここから追加
     # キャラクターを表示
     screen.blit(player, player_rect)
-# <<>> ここまで追加
+# << ここまで追加
 
     # 画面を更新
     pg.display.update()
