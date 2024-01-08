@@ -28,15 +28,15 @@ while True:
         player_rect.x += 10
         if(fRight == False):
             # 右向きでなければ、左向きから右向きに変更
-            fRight = True
             player = pg.transform.flip(player, True, False)
+            fRight = True
     if(key[pg.K_LEFT]):
         # 左向きキーが押された時、X座標を減らす
         player_rect.x -= 10
         if(fRight == True):
             # 右向きなら、右向きから左向きに変更
-            fRight = False
             player = pg.transform.flip(player, True, False)
+            fRight = False
 
     # キャラクターを表示
     screen.blit(player, player_rect)
