@@ -44,6 +44,9 @@ while True:
             player = pg.transform.flip(player, True, False)
             fRight = False
 
+    # キャラクターを表示
+    screen.blit(player, player_rect)
+
     fire = pg.mouse.get_pressed()
     # マウスの左ボタンが押された時に、弾が発射されていなかったら
     if fire[0] and bullet_rect.y < 0:
@@ -55,9 +58,6 @@ while True:
         # 弾を上に移動
         bullet_rect.y -= 10
         screen.blit(bullet, bullet_rect)
-
-    # キャラクターを表示
-    screen.blit(player, player_rect)
 
     # 画面を更新
     pg.display.update()
