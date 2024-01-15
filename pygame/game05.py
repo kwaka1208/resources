@@ -16,7 +16,7 @@ player_rect = pg.rect.Rect(0, 480, 100, 100)
 # 弾追加
 bullet = pg.image.load("images/bullet.png")
 bullet = pg.transform.scale(bullet, (30, 30))
-bullet_rect = pg.rect.Rect(0, -10, 100, 100)
+bullet_rect = pg.rect.Rect(0, -10, 30, 30)
 
 
 # 右を向いているかどうかのフラグ
