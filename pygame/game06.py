@@ -54,7 +54,7 @@ while True:
 
     # fire = pg.mouse.get_pressed()
     # スペースキーが押された時に、弾が発射されていなかったら
-    if key[pg.K_SPACE] and bullet_rect.y < 0 and hit == False:
+    if key[pg.K_SPACE] and bullet_rect.y < 0:
         # 弾の初期位置を設定
         bullet_rect.x = player_rect.x + 50 - 15
         bullet_rect.y = player_rect.y
