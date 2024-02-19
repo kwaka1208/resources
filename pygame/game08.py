@@ -2,6 +2,17 @@ import pygame as pg
 import sys
 import random
 
+#
+#  プレイヤーのダメージ処理
+#
+def player_damage(_player, _player_rect):
+  for i in range(10):
+    _player = pg.transform.flip(_player, True, False)
+    screen.blit(_player, _player_rect)
+    pg.display.update()
+    pg.time.wait(100)
+    screen.fill(pg.Color("GRAY")) 
+
 # pygame初期化
 pg.init()
 
@@ -31,6 +42,7 @@ fRight = True
 # 弾が敵にあたったかどうかのフラグ
 # 当たった：True 当たっない：False
 hit = False
+
 
 while True:
     # 画面を白で塗りつぶす
@@ -74,28 +86,35 @@ while True:
 
     ## 敵の処理
     enemy_rect.y += 10
+
+    # 敵が画面外に出たら、初期位置に戻す
     if enemy_rect.y > 600:
         if hit == True:
+            # 敵が弾に当たったら、敵の向きを元に戻す
             enemy = pg.transform.flip(enemy, False, True)
+            # 当たったフラグをFalseに戻す
             hit = False
+        # 座標をランダムに決定
         enemy_rect.x = random.randint(0, 800)
         enemy_rect.y = 0
+    # 敵の表示位置を更新
     screen.blit(enemy, enemy_rect)
 
-    # 敵とプレイヤーの当たり判定
-    if enemy_rect.colliderect(player_rect):
-      for i in range(10):
-        if hit != True:
-          player = pg.transform.flip(player, True, False)
-          screen.blit(enemy, enemy_rect)
-          pg.display.update()
-          pg.time.Clock().tick(60)
-      
     # 敵と弾の当たり判定
-    if enemy_rect.colliderect(bullet_rect):
+    if enemy_rect.colliderect(bullet_rect) and hit == False:
       enemy = pg.transform.flip(enemy, False, True)
       screen.blit(enemy, enemy_rect)
       hit = True
+      bullet_rect.y = -10
+      screen.blit(bullet, bullet_rect)
+
+    # 敵とプレイヤーの当たり判定
+    if enemy_rect.colliderect(player_rect):
+      # 撃って落ちてきた敵とは当たらない
+      if hit != True:
+        enemy_rect.y = 601
+        player_damage(player, player_rect)
+        continue
 
     # 画面を更新
     pg.display.update()
