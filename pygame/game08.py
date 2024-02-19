@@ -6,11 +6,17 @@ import random
 #  プレイヤーのダメージ処理
 #
 def player_damage(_player, _player_rect):
+  # 表示の更新を10回繰り返す
   for i in range(10):
+    # プレイヤーを左右反転
     _player = pg.transform.flip(_player, True, False)
+    # プレイヤーキャラを展開
     screen.blit(_player, _player_rect)
+    # 画面を更新
     pg.display.update()
+    # 100ミリ秒待つ
     pg.time.wait(100)
+    # 画面全体を塗りつぶす
     screen.fill(pg.Color("GRAY")) 
 
 # pygame初期化
@@ -112,8 +118,11 @@ while True:
     if enemy_rect.colliderect(player_rect):
       # 撃って落ちてきた敵とは当たらない
       if hit != True:
+        # 敵キャラを画面の外に移動
         enemy_rect.y = 601
+        # ダメージ表示処理を呼び出す
         player_damage(player, player_rect)
+        # 繰り返し処理の先頭に戻る
         continue
 
     # 画面を更新
