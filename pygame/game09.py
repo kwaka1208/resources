@@ -25,11 +25,11 @@ def display_info(_score, _hp, _hit):
     screen.blit(text_surface, (50, 50))
     text_surface = font.render(f"HP: {_hp}", True, pg.Color("BLACK"))
     screen.blit(text_surface, (50, 100))
-    if hit == True:
-        text_surface = font.render("HIT!", True, pg.Color("RED"))
-    else:
-        text_surface = font.render("    ", True, pg.Color("WHITE"))
-    screen.blit(text_surface, (50, 150))
+    # if hit == True:
+    #     text_surface = font.render("HIT!", True, pg.Color("RED"))
+    # else:
+    #     text_surface = font.render("    ", True, pg.Color("WHITE"))
+    # screen.blit(text_surface, (50, 150))
 
 # pygame初期化
 pg.init()
@@ -124,6 +124,7 @@ while True:
             # 当たったフラグをFalseに戻す
             hit = False
         # 座標をランダムに決定
+        # enemy_rect.x = random.randint(0, 800)
         enemy_rect.x = random.randint(0, 800)
         enemy_rect.y = 0
     # 敵の表示位置を更新
@@ -134,7 +135,7 @@ while True:
       enemy = pg.transform.flip(enemy, False, True)
       screen.blit(enemy, enemy_rect)
       hit = True
-      bullet_rect.y = -10
+      bullet_rect.y = -100
       screen.blit(bullet, bullet_rect)
       score = score + 10
 
