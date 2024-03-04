@@ -19,17 +19,12 @@ def player_damage(_player, _player_rect):
     # 画面全体を塗りつぶす
     screen.fill(pg.Color("GRAY")) 
 
-def display_info(_score, _hp, _hit):
+def display_info(_score, _hp):
       # スコアとHPを表示
     text_surface = font.render(f"SCORE: {_score}", True, pg.Color("BLACK"))
     screen.blit(text_surface, (50, 50))
     text_surface = font.render(f"HP: {_hp}", True, pg.Color("BLACK"))
     screen.blit(text_surface, (50, 100))
-    # if hit == True:
-    #     text_surface = font.render("HIT!", True, pg.Color("RED"))
-    # else:
-    #     text_surface = font.render("    ", True, pg.Color("WHITE"))
-    # screen.blit(text_surface, (50, 150))
 
 def game_over(_score):
   font = pg.font.SysFont(None, 72)
@@ -106,7 +101,7 @@ while True:
     screen.fill(pg.Color("GRAY")) 
 
     # スコアとHPを表示
-    display_info(score, hp, hit)
+    display_info(score, hp)
 
     # キー入力の情報を取得
     key = pg.key.get_pressed()
