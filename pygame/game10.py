@@ -36,25 +36,6 @@ def game_over(_score):
   text_surface = font.render(f"CONTINUE? Y / N", True, pg.Color("BLACK"))
   screen.blit(text_surface, (50, 200))
   pg.display.update()
-  while True:
-    for event in pg.event.get():
-      if event.type == pg.KEYDOWN:
-        # Yキーが押されたらもう一度
-        if event.key == pg.K_y:
-          # スコアとHPを初期化
-          score = 0
-          hp = 3
-          return
-        # Nキーが押されたら終了
-        if event.key == pg.K_n:
-          pg.quit()
-          sys.exit()
-      # 閉じるボタンが押されたら終了
-      if event.type == pg.QUIT :
-        pg.quit()
-        sys.exit()
-
-
 
 # pygame初期化
 pg.init()
@@ -178,6 +159,36 @@ while True:
         # HPが0以下になったらゲームオーバー
         if hp <= 0:
           game_over(score)
+          status = 0
+          while True:
+            for event in pg.event.get():
+              if event.type == pg.KEYDOWN:
+                # Yキーが押されたらもう一度
+                if event.key == pg.K_y:
+                  status = 1
+                  break
+                # Nキーが押されたら終了
+                if event.key == pg.K_n:
+                  status = 2
+                  break
+              # 閉じるボタンが押されたら終了
+              if event.type == pg.QUIT :
+                  status = 2
+                  break
+            # もう一度プレイする場合は、繰り返し処理の先頭に戻る
+            if status == 0:
+              continue
+            if status == 1:
+              # スコアとHPを初期化
+              score = 0
+              hp = 3
+              break
+            if status == 2:
+              # 終了する場合は、ゲームを終了
+              pg.quit()
+              sys.exit()
+              
+
         # 繰り返し処理の先頭に戻る
         continue
 
