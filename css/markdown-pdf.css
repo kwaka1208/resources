@@ -1,11 +1,19 @@
 body {
-  font-family: "游ゴシック";
-}
-
-h2 {
+    margin: 2rem;
+    font-family: "Hiragino Sans", "游ゴシック", sans-serif;
+  }
+  
+  h2 {
+    margin-top: 2em;
     font-weight: 600;
-}
-
-h3 {
+  }
+  
+  h3 {
+    margin-top: 2em;
     text-decoration: underline;
-}
+  }
+
+  .sign {
+    text-align: right;
+  }
+  
