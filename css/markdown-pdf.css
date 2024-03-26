@@ -1,19 +1,43 @@
-body {
-    margin: 2rem;
-    font-family: "Hiragino Sans", "游ゴシック", sans-serif;
-  }
-  
-  h2 {
-    margin-top: 2em;
-    font-weight: 600;
-  }
-  
-  h3 {
-    margin-top: 2em;
-    text-decoration: underline;
-  }
 
-  .sign {
-    text-align: right;
-  }
-  
+body {
+  margin: 2rem;
+  font-family: "Hiragino Sans", "游ゴシック", sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin: 2em 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.125em;
+  margin-top: 3em;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.sign {
+  text-align: right;
+}
+
+blockquote {
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  width: 80%;
+  border: 1px solid #ccc;
+}
+
+pre {
+  margin: 2em auto;
+  padding: 15px;
+}
+
+li {
+  line-height: 1.8em;
+}
