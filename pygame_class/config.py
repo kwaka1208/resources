@@ -25,7 +25,8 @@ BULLET_SPEED = 10
 ENEMY_WIDTH = 50
 ENEMY_HEIGHT = 50
 ENEMY_SPEED = 3
-ENEMY_SPAWN_RATE = 50 # 敵が生成される間隔（小さいほど頻繁）
+ENEMY_SPAWN_RATE = 100 # 敵が生成される間隔（小さいほど頻繁）
+ENEMY_COUNT = 10
 
 # 画面の色
 STAGE_COLOR = (135, 206, 250)  # 白

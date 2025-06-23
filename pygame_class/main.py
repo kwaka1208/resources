@@ -33,7 +33,7 @@ class Game:
         self.player = Player()
         
         # 最初に複数の敵を生成
-        for _ in range(8):
+        for _ in range(ENEMY_COUNT):
             self.enemies.append(Enemy())
         
         self.enemy_spawn_counter = 0
