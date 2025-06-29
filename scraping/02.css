@@ -1,0 +1,32 @@
+/* style.css for ニュースページ */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #1a202c;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  color: #2b6cb0;
+  border-bottom: 2px solid #2b6cb0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.news {
+  margin: 15px 0;
+}
+
+.news a {
+  color: #2c5282;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.news a:hover {
+  color: #1a365d;
+  text-decoration: underline;
+}

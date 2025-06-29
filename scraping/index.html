@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+  <title>Weather Info</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+  <h1>スクレイピングしてみよう</h1>
+  <ul>
+    <li>
+      <a href="01.html">商品一覧</a>
+      <ol>
+        <li>商品一覧から商品名を取得して表示してください</li>
+        <li>
+          取得した商品名をcsv形式にして表示してください
+        </li>
+      </ol>
+      <pre>
+        りんご,バナナ,オレンジ,ぶどう
+      </pre>
+    </li>
+    <li>
+      <a href="02.html">ニュース見出し</a>
+      <ol>
+        <li>ニュースの見出しを取得して表示してください</li>
+        <li>
+          取得した見出しを以下の形式のJSONにして表示してください（改行はこの通り出なくても構いません）
+        </li>
+      </ol>
+      <pre>
+        {
+          "headlines": [
+            "Python入門：はじめの一歩",
+            "スクレイピングとは何か？",
+            "AIと未来の仕事"
+          ]
+        }
+      </pre>
+    </li>
+    <li>
+       <a href="03.html">天気予報</a>
+       <ol>
+        <li>天気予報、都市名、天気、気温の情報を取得して、ひとつの都市を一行で表示してください</li>
+        <li>
+          取得した天気予報情報を以下の形式のJSONにして表示してください（改行はこの通り出なくても構いません）
+        </li>
+      </ol>
+      <pre>
+        {
+          "weather": [
+            {"city": "東京", "condition": "晴れ", "temperature": "25℃"},
+            {"city": "大阪", "condition": "くもり", "temperature": "22℃"},
+            {"city": "札幌", "condition": "雨", "temperature": "18℃"}
+          ]
+        }
+      </pre>
+    </li>
+  </ul>
+</body>
+</html>

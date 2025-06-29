@@ -1,0 +1,26 @@
+/* style.css for 商品一覧ページ */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7fdfc;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c7a7b;
+  border-bottom: 2px solid #c6f6d5;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 18px;
+}
