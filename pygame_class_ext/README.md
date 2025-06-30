@@ -13,4 +13,6 @@
 ![](code_images/02.png)
 
 ### update関数
+![](code_images/04.png)
+
 ![](code_images/03.png)
