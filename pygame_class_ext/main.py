@@ -93,7 +93,7 @@ class Game:
                 if enemy in self.enemies:
                     self.enemies.remove(enemy)
                     # 敵を倒したら新しい敵を補充する
-                    self.enemies.append(Enemy())
+                    self.enemies.append(Enemy(rd.randint(0, 2)))
 
         # 当たり判定: プレイヤーと敵
         for enemy in self.enemies:
