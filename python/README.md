@@ -42,7 +42,8 @@ python merge_csv.py
 
 ### 実行結果
 
-merged.csv が生成されます。score2 や score3 のように片方にしか存在しない列の欠損部分や、元の空セルが 0 で埋められます。
+- merged.csv が生成されます。
+- score2 や score3 のように片方にしか存在しない列の欠損部分や、元の空セルが 0 で埋められます。
 
 ## 2. CSVの結合（特定の列をキーにしたLEFT JOIN）
 
