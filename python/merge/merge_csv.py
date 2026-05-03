@@ -20,7 +20,7 @@ def main():
 
     # 4. 結果を新しいCSVファイルに出力
     # index=False で行番号(インデックス)が出力されるのを防ぎます
-    output_filename = 'output.csv'
+    output_filename = 'merged.csv'
     merged_df.to_csv(output_filename, index=False)
 
     # 実行結果の確認用表示
